@@ -42,13 +42,15 @@
         <div id="collapsable-nav" class="collapse navbar-collapse">
           <ul id="nav-list" class="nav navbar-nav navbar-right visible-xs">
             <li>
-              <a href="#section-1">Chicken</a>
+              <a href="#section-1" id="chicken-link" class="nav-link"
+                >Chicken</a
+              >
             </li>
             <li>
-              <a href="#section-2">Beaf</a>
+              <a href="#section-2" id="beer-link" class="nav-link">Beaf</a>
             </li>
             <li>
-              <a href="#section-3">Sushi</a>
+              <a href="#section-3" id="sushi-link" class="nav-link">Sushi</a>
             </li>
           </ul>
         </div>
@@ -126,5 +128,12 @@
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".nav-link").click(function () {
+          $(".navbar-collapse").collapse("hide");
+        });
+      });
+    </script>
   </body>
 </html>
